@@ -1,18 +1,214 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.home-link {
+  margin-bottom: 16px;
+  display: block;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  max-height: 40px;
+  display: block;
+  outline: none;
+  padding-left: 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.input:hover {
+  border-color: #000;
+}
+
+.input:focus,
+.input:active {
+  border-color: #4e75ff;
+  color: #000;
+}
+
+#datetime-picker:disabled {
+  background: #fafafa;
+  color: #808080;
+  cursor: not-allowed;
+}
+
+.timer-button {
+  border-radius: 8px;
+  border-color: transparent;
+  padding: 8px 16px;
+  min-width: 75px;
+  height: 40px;
+  background: #4e75ff;
+  display: block;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.timer-button:hover {
+  background: #6c8cff;
+}
+
+.timer-button:disabled,
+.timer-button:disabled:hover,
+.timer-button:disabled:focus,
+.timer-button:disabled:active {
+  background: #cfcfcf;
+  color: #989898;
+  cursor: not-allowed;
+}
+
+.timer {
+  display: flex;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 55px;
+  height: 72px;
+}
+
+.value {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2e2f42;
+}
+
+.form {
+  max-width: 400px;
+  margin: 40px 40px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.form > label {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input[name='delay'] {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 2px solid #808080;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[name='delay']:focus {
+  border-color: #6c8cff;
+  outline: none;
+}
+
+fieldset {
+  margin: 0 0 24px;
+  padding: 16px;
+  border: 2px solid #808080;
+  border-radius: 12px;
+  background-color: #fefefe;
+}
+
+legend {
+  font-weight: 400px;
+  font-size: 16px;
+  padding: 0 8px;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 16px;
+  gap: 8px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+}
+
+button[type='submit'] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background-color: #4e75ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type='submit']:hover {
+  background-color: #6c8cff;
+}
